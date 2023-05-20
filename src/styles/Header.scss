@@ -1,0 +1,28 @@
+.header {
+  background-color: #131317;
+  padding: 20px 0;
+  &__logo {
+    height: 70px;
+    width: 113px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  .nav {
+    display: flex;
+    margin-left: 150px;  
+    &__link {
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.1s ease-in;
+      font-size: 20px;
+      &:hover {
+        color: #BC2829;
+      }
+    }
+    &__link:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+}
