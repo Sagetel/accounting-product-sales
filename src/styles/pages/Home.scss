@@ -1,8 +1,4 @@
 .home {
-  &__container {
-    margin-top: 40px;
-  }
-
   &__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -29,6 +25,7 @@
   .card__image {
     position: absolute;
     height: 100px;
+    width: 100px;
     bottom: 30px;
     right: 10px;
 
@@ -40,6 +37,7 @@
     .card__image {
       position: absolute;
       height: 140px;
+      width: 140px;
       bottom: 20px;
       right: 20px;
 
