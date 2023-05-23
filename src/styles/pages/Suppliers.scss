@@ -1,4 +1,4 @@
-.categories {
+.suppliers {
   &__content {
     margin-top: 40px;
     font-size: 22px;
@@ -10,8 +10,11 @@
   &__header {
     border-bottom: 2px solid #25272e;
     display: grid;
-    grid-template-columns: 100px repeat(2, 1fr) 100px;
+    grid-template-columns: 100px repeat(4, 1fr) 100px;
     margin-bottom: 20px;
+    &-product {
+      grid-template-columns: 100px repeat(5, 1fr) 100px;
+    }
   }
 
   &__property {

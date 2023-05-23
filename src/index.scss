@@ -10,6 +10,7 @@ body {
 * {
   color: #FEFFFF;
   text-decoration: none;
+  cursor: default;
 }
 
 [class*="__container"] {
@@ -18,6 +19,11 @@ body {
   margin: 0 auto;
   margin-top: 40px;
 
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
 }
 
 code {

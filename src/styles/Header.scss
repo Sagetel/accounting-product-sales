@@ -5,6 +5,7 @@
   &__logo {
     height: 70px;
     width: 113px;
+    cursor: pointer;
   }
 
   &__container {
@@ -20,8 +21,12 @@
     &__link {
       cursor: pointer;
       font-weight: 700;
-      transition: all 0.1s ease-in;
+      transition: all 0.15s ease-in;
       font-size: 20px;
+
+      &-active {
+        color: #BC2829;
+      }
 
       &:hover {
         color: #BC2829;
