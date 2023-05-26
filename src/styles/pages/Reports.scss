@@ -1,0 +1,77 @@
+.reports {
+  &__content {
+    margin-top: 40px;
+    font-size: 22px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #101014;
+  }
+
+  &__titel {
+    margin-bottom: 50px;
+  }
+
+  &__header {
+    border-bottom: 2px solid #25272e;
+    display: grid;
+    grid-template-columns: 100px repeat(5, 1fr) 100px;
+    margin-bottom: 20px;
+  }
+
+  &__property {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 15px;
+
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__card {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    position: relative;
+    transition: all 0.1s ease-in;
+    padding: 20px;
+    height: 230px;
+    width: 45%;
+    font-size: 28px;
+    border-radius: 10px;
+    background-color: #101014;
+    font-weight: 700;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+
+    &:hover {
+      color: #BC2829;
+    }
+
+    &-active {
+      color: #BC2829;
+      width: 120%;
+    }
+  }
+
+
+  &__selector {
+    margin-bottom: 20px;
+
+    &-selected {
+      .reports__card {
+        font-size: 22px;
+        height: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

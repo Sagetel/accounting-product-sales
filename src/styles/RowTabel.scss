@@ -2,12 +2,19 @@
   display: grid;
   margin-bottom: 20px;
   grid-template-columns: 100px repeat(2, 1fr) 100px;
+
   &-suppliers {
     grid-template-columns: 100px repeat(4, 1fr) 100px;
   }
+
   &-product {
     grid-template-columns: 100px repeat(5, 1fr) 100px;
   }
+
+  &-sale {
+    grid-template-columns: 100px repeat(5, 1fr) 100px;
+  }
+
   &:hover * {
     color: #BC2829;
   }
@@ -16,7 +23,7 @@
     text-align: center;
     width: 100%;
     transition: all 0.1s ease-in;
-    cursor:default;
+    cursor: default;
   }
 
   &__image {

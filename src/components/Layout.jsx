@@ -6,6 +6,7 @@ import Home from './../pages/Home';
 import Categories from '../pages/Categories';
 import Suppliers from './../pages/Suppliers';
 import Products from './../pages/Products';
+import Reports from './../pages/Reports';
 
 function Layout() {
   return (
@@ -17,6 +18,7 @@ function Layout() {
           <Route path="/category" element={<Categories />} />
           <Route path="/suppliers" element={<Suppliers />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/reports" element={<Reports />} />
         </Routes>
       </main>
     </div>

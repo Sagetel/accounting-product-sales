@@ -26,9 +26,11 @@ function Home() {
               <img src="./assets/images/boxes.png" alt="" className='card__image' />
             </div>
           </Link>
+          <Link to='/reports'>
           <div className="home__card">Отчеты
             <img src="./assets/images/report.png" alt="" className='card__image' />
           </div>
+          </Link>
         </div>
       </div>
     </div>
