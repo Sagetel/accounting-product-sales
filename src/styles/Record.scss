@@ -1,0 +1,50 @@
+.record {
+  margin-bottom: 50px;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #101014;
+    border-radius: 10px;
+  }
+
+  &__header {
+    border-bottom: 2px solid #25272e;
+  }
+
+  &__header,
+  &__row {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  &__cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .15s ease-in-out;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  &__header,
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    column-gap: 20px;
+  }
+
+  &__row {
+    &:hover * {
+      color: #BC2829 !important;
+    }
+  }
+}

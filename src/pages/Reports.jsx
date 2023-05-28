@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import '../styles/pages/Reports.scss'
 import { useSelector } from 'react-redux'
 import RowTable from './../components/RowTable';
+import Record from './../components/Record';
 
 function Sales() {
   const sales = useSelector(({ sales }) => { return sales.items })
   const properties = ['id', 'Продукт', 'Цена', 'Количество', 'Сумма', 'Налог %']
+  const recordsNameList = ['Категории', 'Поставщики', 'Товары', 'Итог']
   const [selectedSection, setSelectedSection] = useState('')
   const changeActiveSelectedSection = (type) => {
     if (selectedSection === type) {
@@ -19,8 +21,11 @@ function Sales() {
       <div className='reports__container'>
         <div className={"reports__selector " + (selectedSection && "reports__selector-selected")}>
           <div className="reports__cards">
-            <div className={"reports__card " + (selectedSection === "sales" ? 'reports__card-active' : '')} onClick={() => { changeActiveSelectedSection("sales") }}>Список продаж</div>
-            <div className={"reports__card " + (selectedSection === "reports" ? 'reports__card-active' : '')} onClick={() => { changeActiveSelectedSection("reports") }}>Отчеты по продажам</div>
+            <div className={"reports__card " + (selectedSection === "sales" ? 'reports__card-active' : '')} onClick={() => { changeActiveSelectedSection("sales") }}>Список продаж
+              <img src="./assets/images/clipboard.png" alt="" className='card__image' /></div>
+            <div className={"reports__card " + (selectedSection === "reports" ? 'reports__card-active' : '')} onClick={() => { changeActiveSelectedSection("reports") }}>Отчеты по продажам
+              <img src="./assets/images/stata.png" alt="" className='card__image' />
+            </div>
           </div>
         </div>
         {selectedSection === "sales" ? <>
@@ -38,7 +43,7 @@ function Sales() {
             </div>
           </div>
         </>
-          : 'Поставщики, продукты, категории, общая стата'
+          : selectedSection === "reports" && recordsNameList.map((item,index) =><Record key={index} nameSection={item}/>)
         }
       </div>
     </div>
