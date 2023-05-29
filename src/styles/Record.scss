@@ -47,4 +47,29 @@
       color: #BC2829 !important;
     }
   }
+
+  &__pie {
+    max-height: 300px;
+  }
+
+  &__label {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 700;
+    &:hover {
+      color: #BC2829;
+    }
+  }
+
+  &__histogram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
