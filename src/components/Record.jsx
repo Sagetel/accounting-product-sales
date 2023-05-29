@@ -111,7 +111,7 @@ function Record({ nameSection }) {
   const dataForChart = {
     labels: dataWithLabels.map(item => item.label),
     datasets: [{
-      label: 'My Chart',
+      label: ' Выручка',
       data: dataWithLabels.map(item => item.value),
       backgroundColor: [
         'rgba(255, 99, 132, 0.6)',
@@ -137,7 +137,7 @@ function Record({ nameSection }) {
   const dataForChart2 = {
     labels: dataWithLabels.map(item => item.label),
     datasets: [{
-      label: 'Profits',
+      label: 'Прибыль',
       data: dataWithLabels.map(item => item.profit),
       backgroundColor: [
         'rgba(255, 99, 132, 0.6)',
@@ -161,7 +161,7 @@ function Record({ nameSection }) {
   };
   const options = {
     animation: {
-      duration: 100, // Установить продолжительность анимации на 500 миллисекунд
+      duration: 0, // Установить продолжительность анимации на 500 миллисекунд
       easing: 'linear' // Установить значение параметра easing на "linear" для более быстрой анимации
     }, plugins: {
       legend: {
@@ -190,9 +190,9 @@ function Record({ nameSection }) {
           <div className="record__histogram">
             <div className='record__label' onClick={() => { setSelectedHistogramm(!selectedPie) }}>
               {selectedPie ?
-                "Распредление по чистой прибыли"
+                "Распредление по обороту"
                 :
-                "Распредление по выручке"
+                "Распредление по чистой прибыли"
               }
             </div>
             <div className="record__pie">
@@ -200,7 +200,6 @@ function Record({ nameSection }) {
                 <Pie data={dataForChart} options={options} />
                 :
                 <Pie data={dataForChart2} options={options} />
-
               }
             </div>
           </div>

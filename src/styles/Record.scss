@@ -9,6 +9,12 @@
     padding: 20px;
     background-color: #101014;
     border-radius: 10px;
+    max-width: 1200px;
+
+    &-final {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__header {
@@ -57,6 +63,7 @@
     cursor: pointer;
     transition: all 0.2s ease;
     font-weight: 700;
+
     &:hover {
       color: #BC2829;
     }
@@ -70,6 +77,32 @@
 
     &:not(:last-child) {
       margin-bottom: 30px;
+    }
+  }
+
+  &__point {
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    font-weight: 600;
+
+    &:hover {
+      color: #BC2829;
+
+      span {
+        border-color: #BC2829;
+      }
+    }
+
+    span {
+      flex-grow: 1;
+      border-bottom: 2px dotted white;
+      margin: 0 10px;
+      margin-top: 14px;
+      /* для добавления отступа между элементами */
     }
   }
 }

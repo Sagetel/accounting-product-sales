@@ -3,11 +3,12 @@ import '../styles/pages/Reports.scss'
 import { useSelector } from 'react-redux'
 import RowTable from './../components/RowTable';
 import Record from './../components/Record';
+import FinalRecord from './../components/FinalRecord';
 
 function Sales() {
   const sales = useSelector(({ sales }) => { return sales.items })
   const properties = ['id', 'Продукт', 'Цена', 'Количество', 'Сумма', 'Налог %']
-  const recordsNameList = ['Категории', 'Поставщики', 'Товары', 'Итог']
+  const recordsNameList = ['Категории', 'Поставщики', 'Товары']
   const [selectedSection, setSelectedSection] = useState('')
   const changeActiveSelectedSection = (type) => {
     if (selectedSection === type) {
@@ -43,10 +44,18 @@ function Sales() {
             </div>
           </div>
         </>
-          : selectedSection === "reports" && recordsNameList.map((item,index) =><Record key={index} nameSection={item}/>)
+          :
+
+          selectedSection === "reports" &&
+          <div>
+
+            {recordsNameList.map((item, index) => <Record key={index} nameSection={item} />)}
+
+            <FinalRecord />
+          </div>
         }
-      </div>
     </div>
+    </div >
   )
 }
 
